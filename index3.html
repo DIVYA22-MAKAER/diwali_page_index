@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Happy Diwali ✨</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e24079, #ffc0cb);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-element {
+            position: absolute;
+            opacity: 0.3;
+            animation: floatAndSpin 4s ease-in-out infinite;
+            font-size: 2.5rem;
+        }
+
+        @keyframes floatAndSpin {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg); 
+                opacity: 0.3;
+            }
+            50% { 
+                transform: translateY(-30px) rotate(180deg); 
+                opacity: 0.6;
+            }
+        }
+
+        .diwali-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px rgba(255, 182, 193, 0.3);
+            position: relative;
+            z-index: 1;
+            border: 3px solid rgba(255, 182, 193, 0.5);
+        }
+
+        .title-festive {
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, #e00673, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(255, 20, 147, 0.2);
+        }
+
+        .btn-festive {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+            border: none;
+            padding: 1rem 2.5rem;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .btn-festive:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6);
+        }
+
+        .input-festive {
+            border: 3px solid rgba(255, 105, 180, 0.5);
+            border-radius: 25px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .input-festive:focus {
+            border-color: #FF1493;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        .message-box {
+            display: none;
+            padding: 2rem;
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(255, 228, 225, 0.9));
+            margin-top: 2rem;
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.2);
+            border: 3px solid rgba(255, 105, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #wish-text {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sparkle {
+            position: absolute;
+            pointer-events: none;
+            animation: sparkleAnim 2s ease-in-out infinite;
+            font-size: 1.8rem;
+            z-index: 1;
+        }
+
+        @keyframes sparkleAnim {
+            0% { transform: scale(0) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+            100% { transform: scale(0) rotate(360deg); opacity: 0; }
+        }
+
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            font-size: 1.5rem;
+            animation: floatHeart 4s ease-in-out infinite;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-40px) scale(1.3); opacity: 0.3; }
+            100% { transform: translateY(-80px) scale(1); opacity: 0; }
+        }
+
+        .diya {
+            position: absolute;
+            font-size: 2rem;
+            animation: glowDiya 2s ease-in-out infinite;
+        }
+
+        @keyframes glowDiya {
+            0%, 100% { text-shadow: 0 0 10px #FFD700; }
+            50% { text-shadow: 0 0 20px #FFA500, 0 0 30px #FF4500; }
+        }
+
+        .bow {
+            position: absolute;
+            font-size: 2rem;
+            animation: rotateBow 3s linear infinite;
+        }
+
+        @keyframes rotateBow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="bg-element" style="top: 10%; left: 10%;">🎀</div>
+        <div class="bg-element" style="top: 30%; right: 15%;">🌟</div>
+        <div class="bg-element" style="bottom: 20%; left: 20%;">🎀</div>
+        <div class="bg-element" style="top: 40%; left: 30%;">🪔</div>
+        <div class="bg-element" style="bottom: 30%; right: 25%;">🌟</div>
+        <div class="bg-element" style="top: 20%; right: 30%;">🎀</div>
+        <div class="bg-element" style="bottom: 40%; left: 15%;">🪔</div>
+        <div class="bg-element" style="top: 50%; right: 40%;">🎀</div>
+        <div class="bg-element" style="bottom: 15%; right: 10%;">🪔</div>
+    </div>
+
+
+    <BR><br><br>
+    <div class="container">
+        <div class="diwali-container animate__animated animate__fadeIn">
+            <h1 class="text-center mb-4 title-festive">✨ Happy Diwali! ✨</h1>
+            
+            <div id="input-section" class="animate__animated animate__bounceIn">
+                <div class="mb-4">
+                    <input type="text" id="nameInput" class="form-control input-festive" 
+                           placeholder="✨ Enter your name for my blessings and wishes ✨">
+                </div>
+                <div class="text-center">
+                    <button onclick="generateWish()" class="btn btn-festive">
+                        Get Your Special Wish! ✨
+                    </button>
+                </div>
+            </div>
+
+            <div id="message-box" class="message-box animate__animated">
+                <p id="wish-text" class="text-center"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wishes = [
+            "To the brightest star in my life, happy Diwali, {name}! 🌠✨ May your day be full of light, love, and all the festival feels. I might even make an appearance soon if you behave...or if you're too cute not to meet! Text me hi if u reading this",
+            "Oh my god, hi {name}! 😄🎉 You're still alive? That's one more reason to celebrate! Happy Diwali! May your day be as fabulous as you are! And hey, don't forget to save some sweets for me, or I might just show up to steal them!",
+            "Shubha Dupawali, {name}! Just a friendly reminder: If someone offers you a thousand fireworks, just remember—those are just distractions from how awesome you really are!(v bad joke I know) May your day sparkle more than your neighbor's lights! Hope you're enjoying every moment! 🎇😆",
+            "Happy Diwali to my favorite troublemaker, {name}! 🎇😏 I hope your day is filled with fun, laughter, and enough sweets to make a dentist cringe! 😜🍭 If you miss me too much, just text away;(maybe) lol😂😂",
+            "Happy Diwali, {name}! 🎉 I hope your day is filled with all the sweets and happiness you can handle! Just remember, while you're busy lighting up your house, don't forget to light up your personality too! 🔥 I mean, it's a festival of lights, not a festival of sleeping on your couch!",
+            "Happy Diwali, {name}! 💖🎉 Dress up, go out, and make the most of this festive chaos! 💃🎊 Send me your selfies so I can see how you light up the world (or at least your Instagram feed)! 🌟📸",
+            "Yo, {name}! 🎆 Happy Diwali! Just popping in to remind you that you're the kind of spark the world needs! Don't go hiding away today—let those beautiful lights guide you out! And save a little sweetness for me",
+            "Happy Diwali to my favorite hot mess! 🎉 May your day shine brighter than your future... because let's be honest, {name}, you need all the help you can get! Remember, if you eat too many sweets, don't blame me when you can't fit into those cute outfits! 😏",
+            "Happy Diwali, you legend, {name}! 🎉💥 Let's be real: with your cooking skills, the firecrackers are probably safer than your kitchen! 🔥😂 Just remember, if your Diwali sweets taste anything like last year, I'm sending the fire department! 🚒🍬 Have fun, but keep the fire extinguisher nearby—just in case! 😂🔥"
+        ];
+
+        let lastMessageIndex = -1;
+
+        function generateWish() {
+            const nameInput = document.getElementById('nameInput');
+            const name = nameInput.value.trim();
+            if (!name) {
+                alert('Please enter your name! ✨');
+                return;
+            }
+
+            // Clear the input field after generating wish
+            nameInput.value = '';
+
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * wishes.length);
+            } while (randomIndex === lastMessageIndex);
+            
+            lastMessageIndex = randomIndex;
+            const personalizedWish = wishes[randomIndex].replace('{name}', name);
+
+            const messageBox = document.getElementById('message-box');
+            const wishText = document.getElementById('wish-text');
+
+            messageBox.style.display = 'block';
+            messageBox.classList.remove('animate__bounceIn');
+            void messageBox.offsetWidth;
+            messageBox.classList.add('animate__bounceIn');
+
+            wishText.textContent = personalizedWish;
+            
+            // Add multiple animation effects
+            addSparkles();
+            addHearts();
+            addDiyas();
+            addBows();
+        }
+
+        function addSparkles() {
+            const container = document.querySelector('.diwali-container');
+            for (let i = 0; i < 2; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.innerHTML = '✨';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                container.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 2000);
+            }
+        }
+
+        function addHearts() {
+            const container = document.querySelector('.diwali-container');
+            for (let i = 0; i < 10; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '💖';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = Math.random() * 100 + '%';
+                container.appendChild(heart);
+
+                setTimeout(() => heart.remove(), 4000);
+            }
+        }
+
+        function addDiyas() {
+            const container = document.querySelector('.diwali-container');
+            for (let i = 0; i < 2; i++) {
+                const diya = document.createElement('div');
+                diya.className = 'diya';
+                diya.innerHTML = '🪔';
+                diya.style.left = Math.random() * 100 + '%';
+                diya.style.bottom = Math.random() * 100 + '%';
+                container.appendChild(diya);
+
+                setTimeout(() => diya.remove(), 2500);
+            }
+        }
+
+        function addBows() {
+            const container = document.querySelector('.diwali-container');
+            for (let i = 0; i < 10; i++) {
+                const bow = document.createElement('div');
+                bow.className = 'bow';
+                bow.innerHTML = '🎀';
+                bow.style.left = Math.random() * 100 + '%';
+                bow.style.top = Math.random() * 100 + '%';
+                container.appendChild(bow);
+
+                setTimeout(() => bow.remove(), 1500);
+            }
+        }
+
+        // Initial decorative elements
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            addDiyas();
+            addBows();
+            addHearts();
+        });
+    </script>
+</body>
+</html>
