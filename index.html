@@ -167,17 +167,21 @@
 
         body {
     overflow-y: auto; }
-
-        h1 {
+        
+h1 {
     text-align: center; /* Center the text */
-    font-size: 3em; /* Adjust font size */
+    font-size: 3em; /* Default font size */
     margin: 20px 0; /* Add some space above and below */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis if text is too long */
 }
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 2.5em; /* Smaller font size for mobile */
+        font-size: 2em; /* Smaller font size for mobile */
     }
+       
 }
     </style>
 </head>
